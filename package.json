@@ -1,0 +1,34 @@
+{
+  "name": "compute-dashboard-e2e",
+  "version": "0.0.0",
+  "description": "compute dashboard e2e tests",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-local": "./.local/setup.sh && npm start && ./.local/teardown.sh",
+    "lint": "eslint ./"
+  },
+  "engines": {
+    "node": ">=8.11.1",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EyalAr/compute-dashboard-e2e.git"
+  },
+  "author": "Eyal Arubas <eyalarubas@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/EyalAr/compute-dashboard-e2e/issues"
+  },
+  "homepage": "https://github.com/EyalAr/compute-dashboard-e2e#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "puppeteer": "^1.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
