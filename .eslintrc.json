@@ -2,5 +2,13 @@
     "extends": "airbnb-base",
     "env": {
         "mocha": true
+    },
+    "globals": {
+        "resetPage": true,
+        "page": true,
+        "APP_URL": true,
+        "ASSETS_DIR": true,
+        "USERNAME": true,
+        "PASSWORD": true
     }
 }

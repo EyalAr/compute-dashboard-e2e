@@ -4,7 +4,7 @@
   "description": "compute dashboard e2e tests",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "mocha",
     "start-local": "./.local/setup.sh && npm start && ./.local/teardown.sh",
     "lint": "eslint ./"
   },
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/EyalAr/compute-dashboard-e2e#readme",
   "dependencies": {
     "chai": "^4.2.0",
+    "mkdirp": "^0.5.1",
     "mocha": "^6.0.2",
     "puppeteer": "^1.14.0"
   },
