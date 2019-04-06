@@ -1,0 +1,6 @@
+[submodule "setup/local/compute-dashboard-backend"]
+	path = setup/local/compute-dashboard-backend
+	url = git@github.com:EyalAr/compute-dashboard-backend.git
+[submodule "setup/local/compute-dashboard-frontend"]
+	path = setup/local/compute-dashboard-frontend
+	url = git@github.com:EyalAr/compute-dashboard-frontend.git

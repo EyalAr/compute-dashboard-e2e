@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "mocha",
-    "start-local": "./.local/setup.sh && npm start || true && ./.local/teardown.sh",
+    "start-with-docker": "./setup/with-docker/setup.sh && npm start || true && ./setup/with-docker/teardown.sh",
+    "start-local": "./setup/local/setup.sh && npm start || true && ./setup/local/teardown.sh",
     "lint": "eslint ./"
   },
   "engines": {

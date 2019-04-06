@@ -36,7 +36,7 @@ after(async () => {
 /* eslint-disable */
 afterEach(async function() {
   const title = (await this.currentTest.fullTitle()).replace(/ /g, "_");
-  const path = `${ASSETS_DIR}/${title}.png`;
+  const path = `${ASSETS_DIR}/${title}.jpg`;
   await page.screenshot({ path });
 });
 /* eslint-enable */
