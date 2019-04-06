@@ -4,13 +4,15 @@ describe('Login', () => {
   describe('failure', () => {
     before(async () => {
       await resetPage();
-      await page.goto(APP_URL);
+      await page.waitFor('input#username');
     });
     after(() => page.close());
     describe('before attempt', () => {
       it('should display the login form', async () => {
-        const form = await page.$('[class*="Login-card-"]');
-        assert.exists(form);
+        const username = await page.$('input#username');
+        const password = await page.$('input#password');
+        assert.exists(username, "username input doesn't exist");
+        assert.exists(password, "password input doesn't exist");
       });
     });
     describe('after attempt', () => {
@@ -23,10 +25,13 @@ describe('Login', () => {
         await password.focus();
         await page.keyboard.type('passpass');
         await submit.click();
+        await page.waitFor(1000);
       });
       it('should keep displaying the login form', async () => {
-        const form = await page.$('[class*="Login-card-"]');
-        assert.exists(form);
+        const username = await page.$('input#username');
+        const password = await page.$('input#password');
+        assert.exists(username, "username input doesn't exist");
+        assert.exists(password, "password input doesn't exist");
       });
       it('should display error message', async () => {
         const error = await page.$('div[role="alertdialog"]');

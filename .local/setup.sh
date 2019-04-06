@@ -1,6 +1,6 @@
 NETWORK=${NETWORK:-"compute-dashboard"}
 BE_IMAGE=${BE_IMAGE:-"compute-dashboard-backend:latest"}
-FE_IMAGE=${BE_IMAGE:-"compute-dashboard-frontend:latest"}
+FE_IMAGE=${FE_IMAGE:-"compute-dashboard-frontend:latest"}
 HOST_PORT=${HOST_PORT:-8080}
 
 echo "creating network ${NETWORK}"
@@ -20,3 +20,5 @@ docker run --rm -d \
   -p ${HOST_PORT}:80 \
   --network ${NETWORK} \
   --name compute-dashboard-frontend ${FE_IMAGE}
+
+sleep 5

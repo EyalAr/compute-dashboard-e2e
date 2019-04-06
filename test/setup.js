@@ -15,11 +15,14 @@ const resetPage = async () => {
     width: PAGE_WIDTH,
     height: PAGE_HEIGHT,
   });
+  await page.goto(APP_URL);
+  await page.evaluate(() => {
+    localStorage.clear(); // eslint-disable-line
+  });
+  await page.reload();
   global.page = page;
 };
 
-global.APP_URL = APP_URL;
-global.ASSETS_DIR = ASSETS_DIR;
 global.resetPage = resetPage;
 global.USERNAME = USERNAME;
 global.PASSWORD = PASSWORD;
