@@ -34,6 +34,7 @@ describe('Logout', () => {
 
   describe('after attempt', () => {
     before('Logging out', async () => {
+      await page.reload();
       const profileButton = await page.$('button[title="Profile"]');
       await profileButton.click();
       await page.waitFor('div#menu-appbar ul[role="menu"]');
