@@ -71,6 +71,7 @@ npm run teardown-with-docker
 ### Environment variables
 
 - `APP_PORT` - The port on which to run the web app. Defaults to `8080`
+- `APP_URL` - The URL to which the test loads. Defaults to `http://localhost:${APP_URL}`
 - `MOCK` - If `true`, backend will serve mock data. Defaults to `false`
 - `ARTIFACTS` - Test artifacts (screenshots, logs) directory. Defaults to `.artifacts`
 - `AWS_ACCESS_KEY_ID` - AWS Access key ID

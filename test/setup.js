@@ -3,7 +3,8 @@ const mkdirp = require('mkdirp');
 
 const PAGE_WIDTH = process.env.PAGE_WIDTH || 1366;
 const PAGE_HEIGHT = process.env.PAGE_HEIGHT || 768;
-const APP_URL = process.env.APP_URL || 'http://localhost:8080';
+const APP_PORT = process.env.APP_PORT || 8080;
+const APP_URL = process.env.APP_URL || `http://localhost:${APP_PORT}`;
 const ARTIFACTS = process.env.ARTIFACTS || '.artifacts';
 const USERNAME = process.env.USERNAME || 'demo';
 const PASSWORD = process.env.PASSWORD || 'demo';
