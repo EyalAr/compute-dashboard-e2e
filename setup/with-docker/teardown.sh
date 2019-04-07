@@ -1,7 +1,4 @@
 NETWORK=${NETWORK:-"compute-dashboard"}
-BE_IMAGE=${BE_IMAGE:-"compute-dashboard-backend:latest"}
-FE_IMAGE=${BE_IMAGE:-"compute-dashboard-frontend:latest"}
-HOST_PORT=${HOST_PORT:-8080}
 ARTIFACTS=${ARTIFACTS:-".artifacts"}
 ARTIFACTS_PATH="$(pwd)/$ARTIFACTS"
 
