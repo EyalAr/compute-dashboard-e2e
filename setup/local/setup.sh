@@ -23,4 +23,15 @@ nohup npx webpack-dev-server --mode production > $ARTIFACTS_PATH/fe.log 2>&1 &
 FE_PID=$!
 cd ..
 echo $FE_PID > fe.pid
-sleep 5 # let webpack dev server start
+
+# wait for frontend (up to 60 seconds):
+COUNTDOWN=60
+echo "Waiting for frontend to be ready..."
+until nc -vz 127.0.0.1 $FE_PORT
+do
+  if [ $COUNTDOWN -eq 0 ]; then
+    break
+  fi
+  sleep 1
+  COUNTDOWN=$((COUNTDOWN - 1))
+done
