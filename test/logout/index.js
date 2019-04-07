@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 
 describe('Logout', () => {
-  before(async () => {
+  before('Logging in', async () => {
     // log in first
     await resetPage();
     await page.waitFor('input#username');
@@ -33,7 +33,7 @@ describe('Logout', () => {
   });
 
   describe('after attempt', () => {
-    before(async () => {
+    before('Logging out', async () => {
       const profileButton = await page.$('button[title="Profile"]');
       await profileButton.click();
       await page.waitFor('div#menu-appbar ul[role="menu"]');
