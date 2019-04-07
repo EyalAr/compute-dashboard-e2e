@@ -5,6 +5,8 @@
     },
     "globals": {
         "resetPage": true,
+        "closePage": true,
+        "doLogin": true,
         "page": true,
         "USERNAME": true,
         "PASSWORD": true

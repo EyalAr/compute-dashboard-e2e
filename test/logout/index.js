@@ -1,21 +1,9 @@
 const { assert } = require('chai');
 
 describe('Logout', () => {
-  before('Logging in', async () => {
-    // log in first
-    await resetPage();
-    await page.waitFor('input#username');
-    const username = await page.$('input#username');
-    const password = await page.$('input#password');
-    const submit = await page.$('button[type="submit"]');
-    await username.focus();
-    await page.keyboard.type(USERNAME);
-    await password.focus();
-    await page.keyboard.type(PASSWORD);
-    await submit.click();
-    await page.waitFor('header');
-  });
-  after(() => page.close());
+  before(() => resetPage());
+  before(() => doLogin());
+  after(() => closePage());
 
   describe('before attempt', () => {
     it('should display the logout button in the profile menu', async () => {

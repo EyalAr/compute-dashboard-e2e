@@ -2,11 +2,9 @@ const { assert } = require('chai');
 
 describe('Login', () => {
   describe('success', () => {
-    before(async () => {
-      await resetPage();
-      await page.waitFor('input#username');
-    });
-    after(() => page.close());
+    before(() => resetPage());
+    after(() => closePage());
+
     describe('before attempt', () => {
       it('should display the login form', async () => {
         const username = await page.$('input#username');
@@ -15,18 +13,9 @@ describe('Login', () => {
         assert.exists(password, "password input doesn't exist");
       });
     });
+
     describe('after attempt', () => {
-      before(async () => {
-        const username = await page.$('input#username');
-        const password = await page.$('input#password');
-        const submit = await page.$('button[type="submit"]');
-        await username.focus();
-        await page.keyboard.type(USERNAME);
-        await password.focus();
-        await page.keyboard.type(PASSWORD);
-        await submit.click();
-        await page.waitFor('header');
-      });
+      before(() => doLogin());
       it('should not keep displaying the login form', async () => {
         const username = await page.$('input#username');
         const password = await page.$('input#password');
