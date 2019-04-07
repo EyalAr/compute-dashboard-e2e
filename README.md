@@ -47,10 +47,10 @@ npm run teardown-local
 Since both the frontend and the backend are designed to run in Docker containers
 we can use prebuilt BE & FE images to set up the test environment:
 
-Set up test environment - a backend and a frontend running locally:
-
 *Docker images for frontend and backend must be available. See Environment
 variables section below for more info.*
+
+Set up test environment - a backend and a frontend running locally:
 
 ```sh
 MOCK=true npm run setup-with-docker
