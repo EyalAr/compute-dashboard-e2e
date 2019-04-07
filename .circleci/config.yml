@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:8-browsers
     working_directory: ~/repo
     steps:
       - checkout
@@ -15,6 +15,8 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run start-local
+      - run: npm run setup-local
+      - run: npm run start
+      - run: npm run teardown-local
       - store_artifacts:
           path: .artifacts

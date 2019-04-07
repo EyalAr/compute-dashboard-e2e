@@ -7,6 +7,10 @@
     "start": "mocha",
     "start-with-docker": "./setup/with-docker/setup.sh && npm start || true && ./setup/with-docker/teardown.sh",
     "start-local": "./setup/local/setup.sh && npm start || true && ./setup/local/teardown.sh",
+    "setup-local": "./setup/local/setup.sh",
+    "teardown-local": "./setup/local/teardown.sh",
+    "setup-with-docker": "./setup/with-docker/setup.sh",
+    "teardown-with-docker": "./setup/with-docker/teardown.sh",
     "lint": "eslint ./"
   },
   "engines": {
