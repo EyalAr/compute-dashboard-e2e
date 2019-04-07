@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/EyalAr/compute-dashboard-e2e.svg?style=svg)](https://circleci.com/gh/EyalAr/compute-dashboard-e2e)
+
 # Compute Dashboard E2E Tests
 
 This repo contains E2E tests for the Compute Dashboard app.
