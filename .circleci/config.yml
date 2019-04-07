@@ -15,8 +15,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run setup-local
-      - run: npm run start
-      - run: npm run teardown-local
+      - run:
+          command: |
+            npm run setup-local
+            npm run start
+            npm run teardown-local
       - store_artifacts:
           path: .artifacts
