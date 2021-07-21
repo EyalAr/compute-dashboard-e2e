@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/EyalAr/compute-dashboard-e2e#readme",
   "dependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.4",
     "mkdirp": "^0.5.1",
     "mocha": "^6.0.2",
     "puppeteer": "^1.14.0"
