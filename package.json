@@ -30,7 +30,7 @@
     "chai": "^4.2.0",
     "mkdirp": "^0.5.1",
     "mocha": "^6.0.2",
-    "puppeteer": "^1.14.0"
+    "puppeteer": "^1.20.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
